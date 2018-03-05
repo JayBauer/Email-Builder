@@ -10,8 +10,6 @@ import fs       from 'fs';
 import siphon   from 'siphon-media-query';
 import path     from 'path';
 import merge    from 'merge-stream';
-import beep     from 'beepbeep';
-import colors   from 'colors';
 
 const $ = plugins();
 
@@ -20,7 +18,7 @@ const PRODUCTION = !!(yargs.argv.production);
 const EMAIL = yargs.argv.to;
 
 gulp.task('build',
-  gulp.series(clean, pages, sass, images, inline));
+  gulp.series(clean, pages, sass, images, inline, cleanCSS));
 
 gulp.task('default',
   gulp.series('build', server, watch));
@@ -30,6 +28,10 @@ gulp.task('zip',
 
 function clean(done) {
   rimraf('dist', done);
+}
+
+function cleanCSS(done) {
+  rimraf('dist/css', done);
 }
 
 // Compile layouts, pages, and partials into flat HTML files

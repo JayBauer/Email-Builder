@@ -27,22 +27,21 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $pre-color: #ff6908;
-$global-width: 580px;
+$global-width: 600px;
 $global-width-small: 95%;
 $global-gutter: 16px;
 $body-background: $light-gray;
 $container-background: $white;
 $global-padding: 16px;
 $global-margin: 16px;
-$global-radius: 3px;
+$global-radius: 16px;
 $global-rounded: 500px;
-$global-breakpoint: $global-width + $global-gutter;
+$global-breakpoint: $global-width;
 
 // 2. Grid
 // -------
 
 $grid-column-count: 12;
-$column-padding-bottom: $global-padding;
 $container-radius: 0;
 
 // 3. Block Grid
@@ -75,12 +74,12 @@ $small-font-size: 80%;
 $small-font-color: $medium-gray;
 $lead-font-size: $global-font-size * 1.25;
 $lead-line-height: 1.6;
-$text-padding: 10px;
+$text-padding: 0px;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-font-weight;
-$subheader-margin-top: 4px;
-$subheader-margin-bottom: 8px;
+$subheader-margin-top: 0px;
+$subheader-margin-bottom: 0px;
 $hr-width: $global-width;
 $hr-border: 1px solid $black;
 $hr-margin: 20px auto;
