@@ -1,5 +1,5 @@
 # Emails don't have to suck now
-What up my glipglops, I told you I'd put this on a repo and then forgot all weekend. But now it's here, no more shit-tier email development for you.
+What up my glipglops, no more shit-tier email development for you.
 
 ## How to use
 - Clone this repo with `git clone`
@@ -39,5 +39,6 @@ And it would get added to this in the layout you selected:
 
 ## Some things to keep in mind
 All your CSS will be inlined at production, which means a couple of things:
-- Do not use `!important` on anything other than media queries. That being said, make sure EVERY rule in your media queries are important, since they can't be inlined and will instead be shoved into a `<style>` tag in the header
+- Do not use `!important` on anything other than media queries. That being said, make sure EVERY rule in your media queries are important, since they can't be inlined and will instead be shoved into a `<style>` tag in the header.
 - Once your stuff is compiled for production, ALL your CSS will be inlined (minus queries). If you have any weird styling problems after compiling, this is the first place you should look, as it may behave slightly differently than if you were relying on inheritance and all that fancy stuff normal CSS usually does.
+- As a general rule of thumb, you should avoid using `display: block` whenever possible, and use `display: table` instead. Everything will be in tables anyway, so it'll save you headaches if some of the default tags aren't behaving as expected.
